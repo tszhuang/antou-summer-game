@@ -47,7 +47,7 @@ body, html {
     width: 600px;
     height: auto;
     padding: 100px 20px 60px 20px;
-    background: url("images/popup-frame.png") no-repeat center center;
+    background: url("popup-frame.png") no-repeat center center;
     background-size: contain;
     border: none;
     border-radius: 15px;
