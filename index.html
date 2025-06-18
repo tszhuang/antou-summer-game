@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>岸岸來潮｜ANTOU SUMMER GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 第一張 intro -->
+    <div id="intro1" class="intro">
+        <img src="images/intro-1.png" class="full-screen">
+    </div>
+
+    <!-- 第二張 intro -->
+    <div id="intro2" class="intro">
+        <img src="images/intro-2.png" class="full-screen">
+    </div>
+
+    <div id="game-exit" onclick="exitGame()">×</div>
+
+    <!-- 遊戲主畫面 -->
+    <div id="gameScreen">
+        <img src="images/game.png" class="full-screen">
+
+        <!-- 熱區設定 -->
+        <div class="hotspot" style="top: 5%; left: 6%; width: 50px; height: 50px;" data-code="summer100" data-desc="滿 $2,000 現折 $100"></div>
+        <div class="hotspot" style="top: 36%; left: 12%; width: 40px; height: 20px;" data-code="summer92" data-desc="任選 2 件 92 折"></div>
+        <div class="hotspot" style="top: 68%; left: 18.5%; width: 20px; height: 20px;" data-code="summer88" data-desc="任選 3 件 88 折"></div>
+        <div class="hotspot" style="top: 95%; left: 84%; width: 80px; height: 20px;" data-code="summer89" data-desc="全單 89 折"></div>
+        <div class="hotspot" style="top: 58%; left: 91%; width: 50px; height: 50px;" data-code="summer2000" data-desc="滿 $2,000 贈 品牌提袋"></div>
+        <div class="hotspot" style="top: 22%; left: 93%; width: 70px; height: 10px;" data-code="summer11" data-desc="買筆贈筆套"></div>
+        <div class="hotspot" style="top: 61%; left: 19%; width: 45px; height: 10px;" data-code="summer92" data-desc="任選 2 件 92 折"></div>
+        <div class="hotspot" style="top: 59%; left: 8%; width: 10px; height: 20px;" data-code="summer88" data-desc="任選 3 件 88 折"></div>
+        <div class="hotspot" style="top: 96%; left: 67%; width: 10px; height: 10px;" data-code="summer89" data-desc="全單 89 折"></div>
+        <div class="hotspot" style="top: 73%; left: 1.5%; width: 10px; height: 50px;" data-code="summer2000" data-desc="滿 $2,000 贈 品牌提袋"></div>
+        <div class="hotspot" style="top: 83%; left: 19%; width: 20px; height: 30px;" data-code="summer11" data-desc="買筆贈筆套"></div>
+    </div>
+
+    <!-- 優惠碼彈窗 -->
+    <div class="popup" id="popup">
+        <div class="popup-close" id="popupClose">&times;</div>
+        <div id="popup-desc"></div>
+        <div class="code-box">
+            <div id="popup-code"></div>
+            <button id="copyBtn">複製</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+<script>
+document.getElementById('openGameBtn').onclick = function() {
+  document.getElementById('gameModalOverlay').style.display = 'block';
+}
+document.getElementById('closeGameModal').onclick = function() {
+  document.getElementById('gameModalOverlay').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
+<a href="javascript:void(0)" id="openGameBtn" style="cursor:pointer;">開啟岸岸來潮尋寶遊戲</a>
+
+<div id="gameModalOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999;">
+  <div id="gameModalContent" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:90%; max-width:1200px; height:90%;">
+    <iframe src="https://shoplineimg.com/65dc59f3be27ca006816d9fe/684f8e8b5d4aa768480ebc28/2160x.webp?source_format=jpg/index.html" style="width:100%; height:100%; border:none; border-radius:15px;"></iframe>
+    <div id="closeGameModal" style="position:absolute; top:10px; right:20px; color:#fff; font-size:30px; font-weight:bold; cursor:pointer;">×</div>
+  </div>
+</div>
